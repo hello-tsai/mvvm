@@ -256,7 +256,7 @@ function observe(data) {
 ```
 
 做完上述之后，我们可以看下效果:
-https://hello-tsai.github.io/myBookmarks/mvvm.html
+https://hello-tsai.github.io/mvvm/mvvm.html
 
 源码：
 https://github.com/hello-tsai/myBookmarks/blob/master/mvvm.html
