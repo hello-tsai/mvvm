@@ -45,9 +45,13 @@ Vue.js 是采用 Object.defineProperty 的 getter 和 setter，并结合观察�
 ![mei](https://www.tinnypea.com/2018/09/implement-a-simple-mvvm-framework-based-on-the-understanding-of-vue/mvvm.png)
 ```
 observer：数据监听，由observer对数据模型使用Object.defineProperty对数据的get、set方法进行劫持，设置数据时通知订阅者(watcher)更新，获取数据时绑定订阅者，
+
 compile：模板/指令编译器，将html文件中的指令(v-model,@clickj,{{}})等特定规则的字符串解析成mvvm中的数据，并且将其添加为一个观察者，同时执行具体的dom更新、事件绑定等
+
 watcher：订阅者，模板/数据观察者，一旦观察到了数据的变动，则进行数据更新
+
 dep：消息订阅器,连接compile与watcher，在数据劫持中绑定watcher
+
 ```
 
 其实就是一方面先进行模版解析（complie）一方面进行数据劫持（observer）再由mvvm进行整合
