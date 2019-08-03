@@ -1,4 +1,5 @@
-#自制一个mvvm框架
+# 自制一个mvvm框架
+
 Vue.js 可以说是MVVM 架构的最佳实践，专注于 MVVM 中的 ViewModel，不仅做到了数据双向绑定，而且也是一款相对比较轻量级的JS 库，API 简洁，很容易上手。
 Vue.js 是采用 Object.defineProperty 的 getter 和 setter，并结合观察者模式来实现数据绑定的。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。
 注：观察者模式又叫做发布订阅模式，它定义了一种一对多的关系，让多个观察者对象同时监听某一个主题对象，这个主题对象的状态发生改变时就会通知所有观察着对象。
@@ -252,5 +253,6 @@ function observe(data) {
 
 做完上述之后，我们可以看下效果:
 https://hello-tsai.github.io/myBookmarks/mvvm.html
+
 源码：
 https://github.com/hello-tsai/myBookmarks/blob/master/mvvm.html
